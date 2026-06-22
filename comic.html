@@ -61,14 +61,15 @@ fetch("data/comics.json")
         <p>${comic.date}</p>
     `;
 
-    for(let i=1;i<=comic.images;i++){
+comic.files.forEach(file => {
 
-        html += `
-        <img
-        src="images/${String(comic.id).padStart(4,'0')}/${i}.webp"
-        >
-        `;
-    }
+    html += `
+    <img
+    src="images/${String(comic.id).padStart(4,'0')}/${file}"
+    >
+    `;
+
+});
 
     document.getElementById("comic").innerHTML=html;
 
