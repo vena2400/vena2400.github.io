@@ -21,6 +21,24 @@ function render(){
 }
 document.addEventListener('click',e=>{
  if(e.target.dataset.author){current=e.target.dataset.author;render();}
- if(e.target.id==='darkToggle'){document.body.classList.toggle('dark');}
+ const darkBtn = document.getElementById('darkToggle');
+
+if(localStorage.getItem('theme') === 'dark'){
+    document.body.classList.add('dark');
+    darkBtn.textContent = '☀️';
+}
+
+darkBtn.addEventListener('click', ()=>{
+
+    document.body.classList.toggle('dark');
+
+    if(document.body.classList.contains('dark')){
+        darkBtn.textContent = '☀️';
+        localStorage.setItem('theme','dark');
+    }else{
+        darkBtn.textContent = '🌙';
+        localStorage.setItem('theme','light');
+    }
+
 });
 document.addEventListener('input',e=>{if(e.target.id==='search')render();});
