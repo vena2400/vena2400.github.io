@@ -7,11 +7,17 @@ function render(){
  list.sort((a,b)=>b.date.localeCompare(a.date));
  document.getElementById('stats').textContent=`총 ${list.length}화`;
  document.getElementById('comicList').innerHTML=list.map(c=>`
+
  <div class="card">
- <h3>${c.title}</h3>
+ <h3>
+   <a href="comic.html?id=${c.id}">
+     ${c.title}
+   </a>
+ </h3>
  <div>${c.author}</div>
  <div>${c.date}</div>
- </div>`).join('');
+ </div>
+`).join('');
 }
 document.addEventListener('click',e=>{
  if(e.target.dataset.author){current=e.target.dataset.author;render();}
