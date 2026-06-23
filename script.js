@@ -17,7 +17,18 @@ function render(){
         c.title.toLowerCase().includes(q)
     );
 
-    list.sort((a,b)=>b.date.localeCompare(a.date));
+const sort =
+    document.getElementById('sort').value;
+
+if(sort === 'new'){
+    list.sort((a,b)=>
+        b.date.localeCompare(a.date)
+    );
+}else{
+    list.sort((a,b)=>
+        a.date.localeCompare(b.date)
+    );
+}
 
     document.getElementById('stats').textContent =
         `총 ${list.length}화`;
@@ -49,6 +60,15 @@ document.addEventListener('click',e=>{
 });
 
 document.addEventListener('input',e=>{
+
+    if(
+        e.target.id === 'search' ||
+        e.target.id === 'sort'
+    ){
+        render();
+    }
+
+});
 
     if(e.target.id === 'search'){
         render();
