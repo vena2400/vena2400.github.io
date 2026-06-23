@@ -37,6 +37,14 @@ body{
 
 <div id="comic" class="comic"></div>
 
+<div id="episodeNav" style="
+max-width:900px;
+margin:20px auto;
+display:flex;
+justify-content:space-between;
+">
+</div>
+
 <script>
 
 const id = Number(
@@ -70,6 +78,34 @@ comic.files.forEach(file => {
 });
 
     document.getElementById("comic").innerHTML=html;
+
+const currentIndex =
+    data.findIndex(c => c.id === id);
+
+const prev = data[currentIndex - 1];
+const next = data[currentIndex + 1];
+
+let nav = "";
+
+if(prev){
+    nav += `
+    <a href="comic.html?id=${prev.id}">
+    ← 이전화
+    </a>
+    `;
+}else{
+    nav += "<span></span>";
+}
+
+if(next){
+    nav += `
+    <a href="comic.html?id=${next.id}">
+    다음화 →
+    </a>
+    `;
+}
+
+document.getElementById("episodeNav").innerHTML = nav;
 
 });
 
