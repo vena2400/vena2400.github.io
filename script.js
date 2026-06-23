@@ -17,8 +17,14 @@ function render(){
         c.title.toLowerCase().includes(q)
     );
 
-const sort =
-    document.getElementById('sort').value;
+const sortEl = document.getElementById('sort');
+
+if(!sortEl){
+    alert("sort를 찾지 못함");
+    return;
+}
+
+const sort = sortEl.value;
 
 if(sort === 'new'){
     list.sort((a,b)=>
