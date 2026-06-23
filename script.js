@@ -70,12 +70,6 @@ document.addEventListener('input',e=>{
 
 });
 
-    if(e.target.id === 'search'){
-        render();
-    }
-
-});
-
 const darkBtn = document.getElementById('darkToggle');
 
 if(localStorage.getItem('theme') === 'dark'){
