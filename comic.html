@@ -64,9 +64,7 @@ fetch("data/comics.json")
 comic.files.forEach(file => {
 
     html += `
-    <img
-    src="images/${String(comic.id).padStart(4,'0')}/${file}"
-    >
+    <img src="${file}">
     `;
 
 });
