@@ -64,7 +64,15 @@ list.map(c=>`
 document.addEventListener('click',e=>{
 
     if(e.target.dataset.author){
+
         current = e.target.dataset.author;
+
+        document
+            .querySelectorAll('.filters button')
+            .forEach(btn => btn.classList.remove('active'));
+
+        e.target.classList.add('active');
+
         render();
     }
 
