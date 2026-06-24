@@ -101,6 +101,8 @@ fetch("data/comics.json")
 .then(r=>r.json())
 .then(data=>{
 
+    data.sort((a,b) => Number(a.id) - Number(b.id));
+
     const comic = data.find(c => Number(c.id) === Number(id));
 
     document.title = `트릭컬 아카이브 | ${comic.title}`;
