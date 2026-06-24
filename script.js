@@ -4,8 +4,13 @@ let current = '전체';
 fetch('data/comics.json')
 .then(r => r.json())
 .then(data => {
-    comics = data;
-    render();
+comics = data;
+
+document
+    .querySelector('[data-author="전체"]')
+    .classList.add('active');
+
+render();
 });
 
 function render(){
