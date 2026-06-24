@@ -40,20 +40,25 @@ if(sort === 'new'){
         `총 ${list.length}화`;
 
     document.getElementById('comicList').innerHTML =
-        list.map(c=>`
+list.map(c=>`
 
-        <div class="card">
-            <h3>
-                <a href="comic.html?id=${c.id}">
-                    ${c.title}
-                </a>
-            </h3>
+<div class="card">
 
-            <div>${c.author}</div>
-            <div>${c.date}</div>
-        </div>
+    <a class="title" href="comic.html?id=${c.id}">
+        ${c.title}
+    </a>
 
-        `).join('');
+    <div class="meta">
+        ✍️ ${c.author}
+    </div>
+
+    <div class="date">
+        📅 ${c.date}
+    </div>
+
+    </div>
+
+    `).join('');
 }
 
 document.addEventListener('click',e=>{
