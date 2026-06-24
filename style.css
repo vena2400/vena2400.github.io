@@ -29,35 +29,43 @@ header p{
     opacity:.8;
 }
 
-.dark{
+body.dark{
     background:#121212;
     color:white;
 }
 
-.dark .card{
+body.dark .card{
     background:#1f1f1f;
 }
 
-.dark .card a{
+body.dark .title{
     color:white;
 }
 
-.dark #search{
-    background:#1f1f1f;
-    color:white;
+body.dark .meta{
+    color:#c0c0c0;
 }
 
-.dark #sort{
-    background:#1f1f1f;
-    color:white;
+body.dark .date{
+    color:#999;
 }
 
-.dark .filters button{
+body.dark #search{
     background:#1f1f1f;
     color:white;
 }
 
-.dark #darkToggle{
+body.dark #sort{
+    background:#1f1f1f;
+    color:white;
+}
+
+body.dark .filters button{
+    background:#1f1f1f;
+    color:white;
+}
+
+body.dark #darkToggle{
     background:#1f1f1f;
     color:white;
 }
