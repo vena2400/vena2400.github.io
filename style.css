@@ -5,11 +5,13 @@
 }
 
 body{
+    margin:0;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     background:#f5f6f7;
     color:#222;
 }
 
+/* HEADER */
 header{
     background:#D9F1A4;
     padding:40px 20px;
@@ -27,18 +29,21 @@ header p{
     opacity:.8;
 }
 
+/* CONTAINER */
 .container{
     max-width:1000px;
     margin:auto;
     padding:20px;
 }
 
+/* STATS */
 #stats{
     font-size:18px;
     font-weight:700;
     margin:15px 0;
 }
 
+/* SEARCH */
 #search{
     width:100%;
     padding:16px;
@@ -49,6 +54,7 @@ header p{
     box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
+/* SORT */
 #sort{
     border:none;
     background:white;
@@ -61,12 +67,14 @@ header p{
     appearance:none;
 }
 
+/* MAIN */
 main{
     max-width:900px;
     margin:auto;
     padding:20px;
 }
 
+/* CARD */
 .card{
     background:white;
     border-radius:20px;
@@ -80,6 +88,7 @@ main{
     transform:translateY(-3px);
 }
 
+/* TITLE */
 .title{
     display:block;
     font-size:28px;
@@ -90,21 +99,24 @@ main{
     line-height:1.4;
 }
 
+.card a:hover{
+    color:#5d7d2b;
+}
+
+/* META */
 .meta{
     color:#666;
     font-size:16px;
     margin-bottom:8px;
 }
 
+/* DATE */
 .date{
     color:#999;
     font-size:14px;
 }
 
-.card a:hover{
-    color:#5d7d2b;
-}
-
+/* FILTERS */
 .filters{
     display:flex;
     flex-wrap:wrap;
@@ -119,4 +131,62 @@ main{
     border-radius:999px;
     cursor:pointer;
     font-weight:700;
-    box-shadow:
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+/* COMIC PAGE */
+.header{
+    padding:15px;
+    background:#D9F1A4;
+}
+
+.comic{
+    max-width:900px;
+    margin:auto;
+}
+
+.comic img{
+    width:100%;
+    display:block;
+}
+
+/* EPISODE NAV */
+#episodeNav{
+    max-width:900px;
+    margin:30px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+#episodeNav a{
+    background:#D9F1A4;
+    color:#222;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:999px;
+    font-weight:700;
+    min-width:120px;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    transition:.2s;
+}
+
+/* BACK BUTTON */
+.back-btn{
+    display:inline-block;
+    background:white;
+    color:#222;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:999px;
+    font-weight:700;
+    box-shadow:0 3px 10px rgba(0,0,0,.12);
+    transition:.2s;
+}
+
+.back-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 5px 14px rgba(0,0,0,.18);
+    }
