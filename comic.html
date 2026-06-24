@@ -103,6 +103,8 @@ fetch("data/comics.json")
 
     const comic = data.find(c=>c.id===id);
 
+    document.title = `트릭컬 아카이브 | ${comic.title}`;
+
     if(!comic){
         document.getElementById("comic").innerHTML=
         "<h2>회차를 찾을 수 없습니다.</h2>";
