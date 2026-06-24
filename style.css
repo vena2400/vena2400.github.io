@@ -231,3 +231,19 @@ main{
     transform:translateY(-2px);
     box-shadow:0 5px 14px rgba(0,0,0,.18);
     }
+
+body.dark header{
+    color:#222;
+}
+
+body.dark header h1{
+    color:#222;
+}
+
+body.dark header p{
+    color:#222;
+}
+
+body.dark #stats{
+    color:#222;
+}
