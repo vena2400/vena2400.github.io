@@ -105,6 +105,9 @@ fetch("data/comics.json")
 
     const comic = data.find(c => Number(c.id) === Number(id));
 
+    const maxId = Math.max(...data.map(c => Number(c.id)));
+    const minId = Math.min(...data.map(c => Number(c.id)));
+
     document.title = `트릭컬 아카이브 | ${comic.title}`;
 
     if(!comic){
@@ -137,22 +140,24 @@ const next = data[currentIndex + 1];
 
 let nav = "";
 
-if(prev){
+if(Number(comic.id) > minId){
     nav += `
-    <a href="comic.html?id=${prev.id}">
+    <a href="comic.html?id=${Number(comic.id)-1}">
     ← 이전화
     </a>
     `;
 }else{
-    nav += "<span></span>";
+    nav += "<span>첫화입니다</span>";
 }
 
-if(next){
+if(Number(comic.id) < maxId){
     nav += `
-    <a href="comic.html?id=${next.id}">
+    <a href="comic.html?id=${Number(comic.id)+1}">
     다음화 →
     </a>
     `;
+}else{
+    nav += "<span>마지막화입니다</span>";
 }
 
 document.getElementById("episodeNav").innerHTML = nav;
