@@ -57,13 +57,30 @@ body.dark a{
     box-shadow:0 4px 12px rgba(0,0,0,.15);
     transition:.2s;
 }
+
+.back-btn{
+    display:inline-block;
+    background:white;
+    color:#222;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:999px;
+    font-weight:700;
+    box-shadow:0 3px 10px rgba(0,0,0,.12);
+    transition:.2s;
+}
+
+.back-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 5px 14px rgba(0,0,0,.18);
+}
 </style>
 </head>
 
 <body>
 
 <div class="header">
-<a href="index.html">← 목록으로</a>
+<a href="index.html" class="back-btn">← 목록으로</a>
 </div>
 
 <div id="comic" class="comic"></div>
