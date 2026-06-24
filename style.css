@@ -61,6 +61,50 @@ header p{
     appearance:none;
 }
 
+main{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+}
+
+.title{
+    display:block;
+    font-size:28px;
+    font-weight:800;
+    color:#222;
+    text-decoration:none;
+    margin-bottom:15px;
+    line-height:1.4;
+}
+
+.meta{
+    color:#666;
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.date{
+    color:#999;
+    font-size:14px;
+}
+
+.card a:hover{
+    color:#5d7d2b;
+}
+
 .filters{
     display:flex;
     flex-wrap:wrap;
