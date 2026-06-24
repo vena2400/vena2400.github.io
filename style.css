@@ -29,6 +29,39 @@ header p{
     opacity:.8;
 }
 
+.dark{
+    background:#121212;
+    color:white;
+}
+
+.dark .card{
+    background:#1f1f1f;
+}
+
+.dark .card a{
+    color:white;
+}
+
+.dark #search{
+    background:#1f1f1f;
+    color:white;
+}
+
+.dark #sort{
+    background:#1f1f1f;
+    color:white;
+}
+
+.dark .filters button{
+    background:#1f1f1f;
+    color:white;
+}
+
+.dark #darkToggle{
+    background:#1f1f1f;
+    color:white;
+}
+
 /* CONTAINER */
 .container{
     max-width:1000px;
